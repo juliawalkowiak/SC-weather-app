@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App vol 2 </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/app2styles.css"> </link>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <form id="search-form">
+            <div class="entercity">
+            <div class="input-group mb-3">
+  <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button></form>
+  <button class="btn btn-outline-secondary" type="button" id="button-addon2-location">📍</button>
+</div></div>
+            <h1 id="city">
+                
+            </h1>
+           <ul>
+               <li class="day" id="current-day">Friday, May 5<sup>th</sup> </li>
+               <li class="time" id="current-time"> Current time: 23:56</li>
+               <li class="daydetail" id="weather-description"> </li>
+           </ul>
+            <div class="row gx-5">
+               <div class="col-6">
+                   <p class="tempinfo" >
+                      🌤<span id="temperature"></span>°C
+                   </p>
+               </div>
+               <div class="col-6">
+                   <ul class="weatherinfo">
+                       <li> 💧 Percipitation: 0%</li>
+                       <li> 💦 Humidity:<span id="humidity"></span>%</li>
+                       <li> 💨 Wind: <span id="wind"></span>km/h</li>
+                   </ul>
+               </div>
+               <div class="row">
+  <div class="column">
+    <div class="card"> <ul class="dayinfo">
+        <li>Saturday</li>
+        <li> ☀️ 20°C</li>
+    </ul> 
+<button type="button" class="btn btn-outline-dark"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  See details
+</button> </div>
+  </div>
+  <div class="column">
+    <div class="card"> <ul class="dayinfo">
+        <li>Sunday</li>
+        <li> ⛅️ 23°C</li>
+    </ul> 
+<button type="button" class="btn btn-outline-dark"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  See details
+</button></div>
+  </div>
+  <div class="column">
+    <div class="card"> <ul class="dayinfo">
+        <li>Monday</li>
+        <li> ☀️ 27°C</li>
+    </ul> 
+<button type="button" class="btn btn-outline-dark"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  See details
+</button></div>
+  </div>
+  <div class="column">
+    <div class="card"><ul class="dayinfo">
+        <li>Tuesday</li>
+        <li> ☁️ 22°C</li>
+    </ul> 
+<button type="button" class="btn btn-outline-dark"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  See details
+</button></div>
+  </div>
+  <div class="column">
+    <div class="card"> <ul class="dayinfo">
+        <li>Wednesday</li>
+        <li> 🌥 20°C</li>
+    </ul>
+<button type="button" class="btn btn-outline-dark"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  See details
+</button> </div>
+  </div>
+  <div class="column">
+    <div class="card"> <ul class="dayinfo">
+        <li>Thursday</li>
+        <li> 🌦 26°C</li>
+    </ul>
+<button type="button" class="btn btn-outline-dark"
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+  See details
+</button> </div>
+  </div>
+</div>
+           </div>
+        </div>
+    </div>
+    <script src="src/app2script.js"></script>
+</html>
