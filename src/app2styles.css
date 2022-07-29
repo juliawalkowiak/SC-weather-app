@@ -27,7 +27,7 @@ h1 {
   );
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.5);
-  background-image: url(https://images.unsplash.com/photo-1529697216570-f48ef8f6b2dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  background-image: url(https://i.pinimg.com/originals/d5/15/50/d51550aec996b3107df3d6c46cc8eabd.jpg);
 }
 li {
   list-style: none;
@@ -37,24 +37,28 @@ li {
 }
 .tempinfo {
   text-align: center;
-  font-size: 120px;
+  font-size: 105px;
+  opacity: 75%;
   border: 0.5px solid #7c7777;
   background: rgba(250, 210, 207, 0.5);
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 0 auto;
+  
 
 
 }
 .weatherinfo {
   margin: 35px 23px;
   text-align: left;
-  font-size: 26px;
+  font-size: 25px;
   border-radius: 20px;
   border: 0.5px solid #7c7777;
   background: rgba(250, 210, 207, 0.5);
-  padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: auto;
+  opacity: 75%;
+
 }
 .card-body-day {
   margin: 0 auto;
@@ -91,15 +95,10 @@ li {
   opacity: 79%;
 }
 .daydetail {
-  font-size: 45px;
+  font-size: 50px;
   opacity: 75%;
-  border-radius: 20px;
-  border: 0.5px solid #7c7777;
-  background: rgba(250, 210, 207, 0.5);
-  padding: 10px;
-  margin-right: 505px;
-  margin-left: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-left: 60px;
+  font-weight: 500;
 }
 
 .dayinfo {
@@ -118,4 +117,16 @@ li {
 .tempunit {
   font-size: 80px;
   font-weight: 500;
+}
+
+.active {
+  color: black;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
