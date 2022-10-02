@@ -25,6 +25,7 @@ dateElement.innerHTML = `Current Time: ${hour}:${minutes}`;
 let fullDateElement = document.querySelector("#current-day");
 fullDateElement.innerHTML = ` ${days[dayIndex]}, ${dateIndex}<sup>th</sup> `;
 
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -46,6 +47,7 @@ function displayWeatherCondition(response) {
 }
 
 function search(city) {
+  console.log(city);
   let units = "metric";
   let apiKey = `f7d6cf7df2325679cfae09f1ff8a7a24`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
