@@ -25,6 +25,34 @@ dateElement.innerHTML = `Current Time: ${hour}:${minutes}`;
 let fullDateElement = document.querySelector("#current-day");
 fullDateElement.innerHTML = ` ${days[dayIndex]}, ${dateIndex}<sup>th</sup> `;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function(day){
+     forecastHTML =
+       forecastHTML +
+       `
+          <div class="col-2 card">
+            <div class="weather-forecast-date"> ${day} </div>
+            <img 
+              src="http://openweathermap.org/img/wn/50d@2x.png"
+              alt=""
+              width="42"
+              />
+            <div class="weather-forecast-temperatures">
+              <span class="weather-forecast-temperature-max"> 18° </span>
+              <span class="weather-forecast-temperature-min"> 12° </span>
+            </div>
+          </div>`; 
+
+  })
+ 
+forecastHTML = forecastHTML + `</div>`;
+ forecastElement.innerHTML=forecastHTML;
+}
+
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -103,3 +131,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Warsaw");
+displayForecast();
+
