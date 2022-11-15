@@ -26,8 +26,7 @@ h1 {
     rgba(255, 221, 136, 0.28) 49%
   );
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.5);
-  background-image: url(https://i.pinimg.com/originals/d5/15/50/d51550aec996b3107df3d6c46cc8eabd.jpg);
+   background: radial-gradient(circle at 10% 20%, rgb(253, 239, 132) 0%, rgb(247, 198, 169) 54.2%, rgb(21, 186, 196) 100.3%);
 }
 li {
   list-style: none;
@@ -60,6 +59,8 @@ li {
   opacity: 75%;
 
 }
+
+
 .card-body-day {
   margin: 0 auto;
   max-width: 30px;
