@@ -10,7 +10,7 @@ if (minutes < 10) {
 }
 let days = [
   "Sunday",
-  "Funday",
+  "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
@@ -27,13 +27,14 @@ fullDateElement.innerHTML = ` ${days[dayIndex]}, ${dateIndex}<sup>th</sup> `;
 
 function displayForecast(response) {
 
-console.log(response);
+  console.log(response.data.daily);
 
   let forecastElement = document.querySelector("#forecast");
-
+  
   let forecastHTML =`<div class="row">`;
   
   let days = ["Mon","Tue", "Wed", "Thu", "Fri", "Sat"];
+ 
 
   days.forEach(function (day){ 
   forecastHTML =  forecastHTML +  `
@@ -70,6 +71,7 @@ axios.get(apiUrl).then(displayForecast);
 
 
 
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -77,8 +79,7 @@ function displayWeatherCondition(response) {
     );
     document.querySelector("#humidity").innerHTML = response.data.main.humidity;
     document.querySelector("#wind").innerHTML = Math.round(
-      response.data.wind.speed
-      )
+      response.data.wind.speed);
     document.querySelector("#pressure").innerHTML = response.data.main.pressure;
       document.querySelector("#weather-description").innerHTML =
       response.data.weather[0].main;
@@ -90,10 +91,7 @@ function displayWeatherCondition(response) {
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
         );
         
-        
         getForecast(response.data.coord);
-        
-
       }
       
       displayForecast();
